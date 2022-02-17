@@ -10,6 +10,12 @@ terraform {
 
 provider "aws" {
   region = var.region
+  default_tags {
+    tags = {
+      Environment = "dev"
+      Team        = "adobe-product"
+    }
+  }
 }
 
 resource "aws_s3_bucket" "app_inbound" {
