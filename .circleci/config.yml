@@ -2,7 +2,7 @@ version: 2
 
 jobs:
   plan-apply:
-    working_directory: ../terraform_files
+    working_directory: terraform_files
     docker:
       - image: docker.mirror.hashicorp.services/hashicorp/terraform:light
     steps:
@@ -10,7 +10,7 @@ jobs:
       - run:
           name: terraform init & plan
           command: |
-            terraform init
+            terraform init terraform_files
             terraform plan -out tfapply
       - persist_to_workspace:
           root: .
