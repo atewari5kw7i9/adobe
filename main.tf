@@ -14,7 +14,7 @@ provider "aws" {
 
 resource "aws_s3_bucket" "app_inbound" {
   tags = {
-    Name = "App Bucket"
+    Name = "Adobe"
   }
 
   bucket = "${var.app}.${var.label_inbound}"
@@ -34,7 +34,7 @@ resource "aws_s3_bucket" "app_inbound" {
 
 resource "aws_s3_bucket" "app_outbound" {
   tags = {
-    Name = "App Bucket"
+    Name = "Adobe"
   }
 
   bucket = "${var.app}.${var.label_outbound}"
