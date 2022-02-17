@@ -10,7 +10,7 @@ jobs:
       - run:
           name: terraform init & plan
           command: |
-            terraform init terraform_files
+            terraform init -chdir terraform_files
             terraform plan -out tfapply
       - persist_to_workspace:
           root: .
