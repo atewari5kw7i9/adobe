@@ -22,7 +22,7 @@ output "s3_bucket_name" {
 
 terraform {
   backend "s3" {
-    bucket = aws_s3_bucket.terraform_state.bucket
+    bucket = "adobe-circle-ci-backend"
     key    = "tfstate"
     region = "us-east-1"
   }
